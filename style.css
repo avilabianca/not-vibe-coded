@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #222222;
+    --secondary-color: #fcfcfc;
+    --font-family-sans-serif: "Average Sans", sans-serif;
+    --font-family-serif: "Belgiano Serif", serif;
+    --font-family-monospace: "Geist Mono", monospace;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: "Belgiano Serif";
+    src: url("./assets/fonts/Belgiano\ Serif\ 2.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #fcfcfc;
+    margin: 0;
+    color: #222222;
+    font-family: "Average Sans", sans-serif;
+    max-width: 100%;
+
+}
+
+#logo {
+    font-family: "Belgiano Serif", serif;
+    font-weight: 400;
+    font-size: 1.375rem;
+    text-decoration: none;
+    color: #222222;
+}
+
+.navbar {
+    display: flex;
+    font-family: "Geist Mono", monospace;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 3.25rem;
+    align-items: center;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #222222;
+}
+
+p {
+    font-family: "Average Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.375rem;
+    line-height: 0;
+}
+
+h1 {
+    font-family: "Belgiano Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5rem;
+    line-height:;
+    width: 100%;
+    max-width: 35rem;
+}
+
+h2 {
+    font-family: "Geist Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+h3 {
+    font-family: "Belgiano Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+
+h4 {
+    font-family: "Belgiano Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25rem;
+    padding-bottom: 6.25rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+video {
+    width: 100%;
+    max-width: 52rem;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-radius: 0.25rem;
+} 
+
+.expand-arrow {
+    width: 1.5rem;
+    height: auto;
+}
