@@ -1,10 +1,20 @@
+/* 1. General styles */
 :root {
     --primary-color: #222222;
     --secondary-color: #fcfcfc;
+    --tertiary-color: #00A59A;
     --font-family-sans-serif: "Average Sans", sans-serif;
     --font-family-serif: "Belgiano Serif", serif;
     --font-family-monospace: "Geist Mono", monospace;
     font-size: 16px;
+}
+
+body {
+    background-color: #fcfcfc;
+    margin: 0;
+    color: #222222;
+    font-family: "Average Sans", sans-serif;
+    max-width: 100%;
 }
 
 @font-face {
@@ -15,17 +25,31 @@
     font-display: swap;
 }
 
-body {
-    background-color: #fcfcfc;
-    margin: 0;
-    color: #222222;
-    font-family: "Average Sans", sans-serif;
-    max-width: 100%;
-
+/* 2. Page layout */
+header {
+    display: grid;
+    grid-template-columns: 1fr,auto, 1fr;
+    align-items: center;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
 }
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+
+/* 3. Components */
 
 #logo {
     font-family: "Belgiano Serif", serif;
+    grid-column: 1;
     font-weight: 400;
     font-size: 1.375rem;
     text-decoration: none;
@@ -33,44 +57,85 @@ body {
 }
 
 .navbar {
-    display: flex;
-    font-family: "Geist Mono", monospace;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
-    padding-left: 1.5rem;
-    padding-right: 2rem;
+    grid-column: 2;
+    justify-self: center;
 }
 
-nav ul {
+.nav-links {
     list-style-type: none;
     display: flex;
     gap: 3.25rem;
-    align-items: center;
-
 }
 
-nav a {
+.nav-link {
+    font-family: "Geist Mono", monospace;
     text-decoration: none;
     color: #222222;
 }
 
-p {
-    font-family: "Average Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.375rem;
-    line-height: 0;
+.section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    padding-left: 0;
+    padding-right: 0;
 }
+
+.project-card {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    grid-template-rows: auto auto;
+    gap: 0;
+    padding-top: 6.25rem;   
+    padding-bottom: 6.25rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.project-video {
+    grid-column: 1;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    max-width: 52rem;
+    border-radius: 0.25rem;
+}
+
+.project-info {
+    grid-column: 1;
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    gap: auto;
+}
+
+.project-title {
+    justify-self: left;
+    display: flex;
+    align-items: center; 
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.project-date {
+    justify-self: right;
+}
+
+.expand-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 4. Typography */
 
 h1 {
     font-family: "Belgiano Serif", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 3.5rem;
-    line-height:;
+    line-height: 3.5rem;
     width: 100%;
     max-width: 35rem;
 }
@@ -100,38 +165,15 @@ h4 {
     line-height: 1.75rem;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 6.25rem;
-    padding-bottom: 6.25rem;
-    padding-left: 1.5rem;
-    padding-right: 2rem;
+p {
+    font-family: "Average Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.375rem;
+    line-height: 0;
 }
 
-#home {
-    display: flex;
-    flex-direction: column;
-    padding-top: 25rem;
-    padding-bottom: 6.25rem;
-    padding-left: 1.5rem;
-    padding-right: 2rem;
-}
-video {
-    width: 100%;
-    max-width: 52rem;
-    height: auto;
-    border-radius: 0.25rem;
-}
+/* 5. States and responsive styles */
+.nav-link:hover {}
 
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    border-radius: 0.25rem;
-} 
-
-.expand-arrow {
-    width: 1.5rem;
-    height: auto;
-}
+@media (max-width: 600px) {}
